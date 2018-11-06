@@ -6,6 +6,7 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <meta http-equiv="X-UA-Compatible" content="ie=edge">
   <title>HTML Academy: Барбершоп «Бородинский»</title>
+  <link rel="stylesheet" href="css/style.css">
 </head>
 
 <body>
@@ -59,8 +60,10 @@
         <input class="input" id="record-form__email" type="text" name="email" placeholder="Контактный e-mail">
       </fieldset>
 
-      <label class="visually-hidden" for="record-form__info">Доп. информация для мастера</label>
-      <textarea class="input" name="additionalInfo" id="record-form__info" placeholder="Доп. информация для мастера"></textarea>
+      <p class="record-form__additional-info">
+        <label class="visually-hidden" for="record-form__info">Доп. информация для мастера</label>
+        <textarea class="input" name="additionalInfo" id="record-form__info" placeholder="Доп. информация для мастера"></textarea>
+      </p>
 
       <fieldset class="record-form__beard-models">
         <legend class="record-form__legend">Выберите модель бороды:</legend>
@@ -127,31 +130,33 @@
   </main>
 
   <footer class="main-footer">
-    <div class="contacts main-footer__contacts">
+    <div class="contacts  main-footer__contacts">
       <p class="contacts__title">Барбершоп Бородинский</p>
 
       <p class="contacts__address">
         г.Санкт-Перетбург, ул.Большая Конюшенная 19/8
       </p>
 
-      <a href="#" class="contacts__phone button">+7 (812) 555-66-66</a>
+      <a href="#" class="contacts__phone  button">+7 (812) 555-66-66</a>
     </div>
 
     <ul class="socials">
-      <li class="socials__item socials__item--vk">
-        <span class="visually-hidden">Мы Вконтакте</span>
+      <li class="socials__item  socials__item--vk">
+        <a href="#"><span class="visually-hidden">Мы Вконтакте</span></a>
       </li>
-      <li class="socials__item socials__item--fb">
-        <span class="visually-hidden">Мы в Фейсбуке</span>
+
+      <li class="socials__item  socials__item--fb">
+        <a href="#"><span class="visually-hidden">Мы в Фейсбуке</span></a>
       </li>
-      <li class="socials__item socials__item--in">
-        <span class="visually-hidden">Мы в Инстаграме</span>
+
+      <li class="socials__item  socials__item--in">
+        <a href="#"><span class="visually-hidden">Мы в Инстаграме</span></a>
       </li>
     </ul>
 
     <div class="copyright">
       <p class="copyright__text">Разработано:</p>
-      <a href="#" class="copyright__link button">HTML Academy</a>
+      <a href="#" class="copyright__link  button">HTML Academy</a>
     </div>
   </footer>
 

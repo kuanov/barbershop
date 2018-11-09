@@ -1,13 +1,7 @@
 .user-navigation {
-  width: 250px;
-  margin: 0;
-  min-height: 313px;
-  padding: 0;
-
   background-color: @bg-brown;
   font-family: "pt_sans_narrowregular", Arial, sans-serif;
   text-transform: capitalize;
-  list-style: none;
 }
 
 .user-navigation__item {
@@ -17,4 +11,27 @@
 .user-navigation__link {
   color: #ffffff;
   text-decoration: none;
+}
+
+@media (min-width: @tablet-width) {
+  .user-navigation {
+    width: 50px;
+
+    text-transform: uppercase;
+    background-color: #000000;
+  }
+
+  .user-navigation__item {
+    padding: 24px 0;
+  }
+}
+
+@media (min-width: @desktop-width) {
+  .user-navigation {
+    width: 160px;
+  }
+
+  .user-navigation__item {
+    padding: 24px 30px;
+  }
 }

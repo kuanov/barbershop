@@ -1,7 +1,44 @@
 .page-header {
+  display: flex;
+  flex-direction: column;
+
   font-family: "pt_sans_narrowbold", Arial, sans-serif;
   line-height: 24px;
   text-transform: uppercase;
   color: #ffffff;
   background-color: @bg-darkness;
+}
+
+.page-header__logo {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  height: 85px;
+}
+
+@media (min-width: @tablet-width) {
+  .page-header {
+    background-image: url("../img/back-tablet.jpg");
+    background-position: 0 0;
+    background-repeat: no-repeat;
+  }
+
+  .page-header__logo {
+    height: 400px;
+
+    order: 2;
+  }
+}
+
+@media (min-width: @desktop-width) {
+  .page-header {
+    background-image: url("../img/back-desktop.jpg");
+    background-position: 0 0;
+    background-repeat: no-repeat;
+  }
+
+  .page-header__logo {
+    height: 648px;
+  }
 }

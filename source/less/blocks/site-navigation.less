@@ -1,9 +1,4 @@
 .site-navigation {
-  width: 250px;
-  margin: 0;
-  padding: 0;
-
-  list-style: none;
 }
 
 .site-navigation__item {
@@ -13,4 +8,27 @@
 .site-navigation__link {
   text-decoration: none;
   color: inherit;
+}
+
+@media (min-width: @tablet-width) {
+  .site-navigation {
+    display: flex;
+    justify-content: space-between;
+
+    width: 560px;
+  }
+
+  .site-navigation__item {
+    padding: 24px 0;
+  }
+}
+
+@media (min-width: @desktop-width) {
+  .site-navigation {
+    width: 760px;
+  }
+
+  .site-navigation__item {
+    padding: 24px 30px;
+  }
 }

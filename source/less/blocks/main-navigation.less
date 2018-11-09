@@ -1,4 +1,36 @@
 .main-navigation {
-  position: relative;
+  width: 320px;
+  margin: 0 auto;
+
   background-color: @bg-brown-light;
+}
+
+.main-navigation__list {
+  margin: 0;
+  padding: 0;
+
+  list-style: none;
+}
+
+@media (min-width: @tablet-width) {
+  .main-navigation {
+    width: auto;
+    margin: 0;
+
+    background-color: #000000;
+  }
+
+  .main-navigation__wrapper {
+    display: flex;
+    justify-content: space-between;
+
+    width: 640px;
+    margin: 0 auto;
+  }
+}
+
+@media (min-width: @desktop-width) {
+  .main-navigation__wrapper {
+    width: 960px;
+  }
 }

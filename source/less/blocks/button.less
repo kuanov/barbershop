@@ -1,0 +1,42 @@
+.button {
+  display: inline-block;
+
+  padding: 18px 30px;
+  padding-bottom: 19px;
+
+  font-family: "pt_sans_narrowbold", Arial, sans-serif;
+  font-size: 18px;
+  line-height: 24px;
+
+  text-align: center;
+  vertical-align: middle;
+  text-transform: uppercase;
+  text-decoration: none;
+  color: #000000;
+  background-color: transparent;
+
+  border: 1px solid #e5ddd5;
+
+  &:hover,
+  &:focus {
+    border: 1px solid #d5c9bd;
+  }
+
+  &:active {
+    color: #958c84;
+    background-color: #d5c9bd;
+
+    border: 1px solid #d5c9bd;
+  }
+
+  &--dark {
+    color: #ffffff;
+  }
+
+  &--huge {
+    width: 100%;
+
+    font-size: 24px;
+    line-height: 30px;
+  }
+}

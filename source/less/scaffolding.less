@@ -1,0 +1,43 @@
+@font-face {
+  font-family: "pt_sans_narrowbold";
+  src: url("../fonts/pt_sans-narrow-web-bold-webfont.woff2") format("woff2"),
+    url("../fonts/pt_sans-narrow-web-bold-webfont.woff") format("woff");
+  font-weight: normal;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: "pt_sans_narrowregular";
+  src: url("../fonts/pt_sans-narrow-web-regular-webfont.woff2") format("woff2"),
+    url("../fonts/pt_sans-narrow-web-regular-webfont.woff") format("woff");
+  font-weight: normal;
+  font-style: normal;
+}
+
+body {
+  min-width: @mobile-width;
+  margin: 0;
+
+  font-family: "pt_sans_narrowregular", Arial, sans-serif;
+  font-size: 18px;
+  line-height: 27px;
+
+  color: #000000;
+  background-color: @bg-lightness;
+}
+
+img {
+  max-width: 100%;
+  height: auto;
+}
+
+.visually-hidden {
+  position: absolute;
+
+  width: 1px;
+  height: 1px;
+  margin: -1px;
+  padding: 0;
+  border: none;
+  clip: rect(0, 0, 0, 0);
+}

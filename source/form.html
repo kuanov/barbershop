@@ -6,6 +6,7 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <meta http-equiv="X-UA-Compatible" content="ie=edge">
   <title>HTML Academy: Барбершоп «Бородинский»</title>
+
   <link rel="stylesheet" href="css/style.css">
 </head>
 
@@ -16,20 +17,22 @@
     </a>
 
     <nav class="main-navigation">
-      <p class="main-navigation__current">Главная</p>
-      <button class="main-navigation__burger">Открыть меню</button>
+      <!-- <p class="main-navigation__current">Главная</p> -->
+      <button class="main-navigation__burger"><span class="visually-hidden">Открыть меню</span></button>
 
-      <ul class="main-navigation__list site-navigation">
-        <li class="site-navigation__item site-navigation__item--active"><a>Главная</a></li>
-        <li class="site-navigation__item"><a href="photo.html">Наши Работы</a></li>
-        <li class="site-navigation__item"><a href="form.html">Записаться</a></li>
-        <li class="site-navigation__item"><a href="#">Контакты</a></li>
-        <li class="site-navigation__item"><a href="#">HTML Academy</a></li>
-      </ul>
+      <div class="main-navigation__wrapper">
+        <ul class="main-navigation__list  site-navigation">
+          <li class="site-navigation__item  site-navigation__item--active"><a>Главная</a></li>
+          <li class="site-navigation__item"><a class="site-navigation__link" href="photo.html">Наши Работы</a></li>
+          <li class="site-navigation__item"><a class="site-navigation__link" href="form.html">Записаться</a></li>
+          <li class="site-navigation__item"><a class="site-navigation__link" href="#">Контакты</a></li>
+          <li class="site-navigation__item"><a class="site-navigation__link" href="#">HTML Academy</a></li>
+        </ul>
 
-      <ul class="main-navigation__list user-navigation">
-        <li class="user-navigation__item"><a class="user-navigation__login" href="login.html">Войти</a></li>
-      </ul>
+        <ul class="main-navigation__list  user-navigation">
+          <li class="user-navigation__item"><a class="user-navigation__link" href="login.html">Войти</a></li>
+        </ul>
+      </div>
     </nav>
   </header>
 
@@ -129,15 +132,15 @@
     </form>
   </main>
 
-  <footer class="main-footer">
-    <div class="contacts  main-footer__contacts">
+  <footer class="page-footer">
+    <div class="page-footer__contacts  contacts">
       <p class="contacts__title">Барбершоп Бородинский</p>
 
       <p class="contacts__address">
-        г.Санкт-Перетбург, ул.Большая Конюшенная 19/8
+        г. Санкт-Перетбург, ул.Большая Конюшенная 19/8
       </p>
 
-      <a href="#" class="contacts__phone  button">+7 (812) 555-66-66</a>
+      <p href="#" class="contacts__phone  button button--dark">+7 (812) 555-66-66</p>
     </div>
 
     <ul class="socials">
@@ -156,7 +159,7 @@
 
     <div class="copyright">
       <p class="copyright__text">Разработано:</p>
-      <a href="#" class="copyright__link  button">HTML Academy</a>
+      <a href="#" class="copyright__link  button button--dark">HTML Academy</a>
     </div>
   </footer>
 

@@ -24,7 +24,9 @@
     "url": "https://github.com/kuanov/barbershop/issues"
   },
   "homepage": "https://github.com/kuanov/barbershop#readme",
-  "dependencies": {},
+  "dependencies": {
+    "normalize.css": "^8.0.0"
+  },
   "devDependencies": {
     "autoprefixer": "^9.3.1",
     "browser-sync": "^2.26.3",

@@ -1,0 +1,27 @@
+.sale {
+  color: #ffffff;
+  background-color: #353535;
+}
+
+.sale__text {
+  font-size: 20px;
+  font-weight: normal;
+}
+
+@media (min-width: @tablet-width) {
+  .sale__text {
+    font-family: "pt_sans_narrowbold", Arial, sans-serif;
+    font-size: 30px;
+    line-height: 30px;
+    text-transform: uppercase;
+  }
+}
+
+@media (min-width: @desktop-width) {
+  .sale__text {
+    font: inherit;
+    font-size: 20px;
+    text-transform: initial;
+    text-align: center;
+  }
+}

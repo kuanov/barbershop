@@ -1,4 +1,9 @@
 .news {
+  width: @mobile-width;
+  margin: 0 auto;
+
+  color: #000000;
+  background-color: @bg-lightness;
 }
 
 .news__heading {
@@ -21,7 +26,8 @@
 .news__item {
   display: flex;
   align-items: flex-start;
-  padding: 13px 0;
+
+  padding: 20px;
 
   &:not(:last-child) {
     border-bottom: 1px solid #e5ddd5;
@@ -30,6 +36,7 @@
 
 .news__date {
   display: inline-block;
+  margin-right: 20px;
   padding: 9px 12px;
   padding-bottom: 14px;
 
@@ -52,8 +59,37 @@
 }
 
 .news__text {
+  width: 210px;
   margin: 0;
 }
 
 .news__to-all {
+}
+
+@media (min-width: @tablet-width) {
+  .news {
+    width: auto;
+    margin: 0;
+  }
+
+  .news__wrapper {
+    width: 640px;
+    margin: 0 auto;
+  }
+
+  .news__heading {
+    font-size: 40px;
+    line-height: 40px;
+    text-align: left;
+  }
+
+  .news__list {
+    display: flex;
+    flex-wrap: wrap;
+  }
+
+  .news__item {
+    width: 320px;
+    padding: 0;
+  }
 }

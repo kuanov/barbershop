@@ -1,5 +1,32 @@
 .page-footer {
+  box-sizing: border-box;
+  width: @mobile-width;
+  margin: 0 auto;
+  padding: 0 20px;
+
   text-align: center;
   color: #ffffff;
   background-color: #292929;
+}
+
+@media (min-width: @tablet-width) {
+  .page-footer {
+    width: auto;
+    margin: 0;
+  }
+
+  .page-footer__wrapper {
+    display: flex;
+    flex-direction: wrap;
+    justify-content: space-between;
+
+    width: 640px;
+    margin: 0 auto;
+  }
+}
+
+@media (min-width: @desktop-width) {
+  .page-footer__wrapper {
+    width: 960px;
+  }
 }

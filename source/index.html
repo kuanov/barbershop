@@ -65,44 +65,48 @@
           <h2 class="visually-hidden">Статистика Барбершопа</h2>
           <b class="stats__slogan">Стрижка у нас это выгодно!</b>
           <p class="stats__intro">
-            Мужская стрижка требует точного подхода. Обратимсяк статистике:
+            Мужская стрижка требует точного подхода. Обратимся к статистике:
           </p>
         </header>
 
         <table class="stats__table">
-          <tr class="stats__row">
-            <td class="stats__value">1 500 <sup>*</sup></td>
-            <td class="stats__field">
-              рублей <br />
-              вложений
-            </td>
-          </tr>
-          <tr class="stats__row stats__row--light">
-            <td class="stats__value">7 200</td>
-            <td class="stats__field">
-              секунд <br />
-              времени мастера
-            </td>
-          </tr>
-          <tr class="stats__row stats__row--dark">
-            <td class="stats__value">90 000</td>
-            <td class="stats__field">
-              постриженных <br />
-              волос
-            </td>
-          </tr>
-          <tr class="stats__row">
-            <td class="stats__value">500 000 <sup>*</sup></td>
-            <td class="stats__field">
-              лайков и <br />
-              комплиментов
-            </td>
-          </tr>
+          <tbody class="stats__body">
+            <tr class="stats__row">
+              <td class="stats__value">1 500 <sup>*</sup></td>
+              <td class="stats__field">
+                рублей <br />
+                вложений
+              </td>
+            </tr>
+            <tr class="stats__row stats__row--light">
+              <td class="stats__value">7 200</td>
+              <td class="stats__field">
+                секунд <br />
+                времени мастера
+              </td>
+            </tr>
+            <tr class="stats__row stats__row--dark">
+              <td class="stats__value">90 000</td>
+              <td class="stats__field">
+                постриженных <br />
+                волос
+              </td>
+            </tr>
+            <tr class="stats__row">
+              <td class="stats__value">500 000 <sup>*</sup></td>
+              <td class="stats__field">
+                лайков и <br />
+                комплиментов
+              </td>
+            </tr>
+          </tbody>
         </table>
 
-        <small class="stats__legend">
-          <sup>*</sup> - приведённые данные ложь
-        </small>
+        <!--
+          <small class="stats__legend">
+            <sup>*</sup> - приведённые данные ложь
+          </small>
+        -->
       </section>
 
       <section class="advantages">
@@ -153,106 +157,119 @@
       </section>
 
       <section class="news">
-        <h2 class="news__heading">Новости и Акции</h2>
+        <div class="news__wrapper">
+          <h2 class="news__heading">Новости и Акции</h2>
 
-        <ul class="news__list">
-          <li class="news__item">
-            <time class="news__date" datetime="29-09-2018">
-              <span class="news__day">29</span>
-              <span class="news__month">сент</span>
-            </time>
+          <ul class="news__list">
+            <li class="news__item">
+              <time class="news__date" datetime="29-09-2018">
+                <span class="news__day">29</span>
+                <span class="news__month">сент</span>
+              </time>
 
-            <p class="news__text">
-              Нам наконец завезли Ягермайстер! Теперь вы можете пропусить
-              стаканчик во время стрижки.
-            </p>
-          </li>
+              <p class="news__text">
+                Нам наконец завезли Ягермайстер! Теперь вы можете пропусить
+                стаканчик во время стрижки.
+              </p>
+            </li>
 
-          <li class="news__item">
-            <time class="news__date" datetime="19-09-2018">
-              <span class="news__day">19</span>
-              <span class="news__month">сент</span>
-            </time>
+            <li class="news__item">
+              <time class="news__date" datetime="19-09-2018">
+                <span class="news__day">19</span>
+                <span class="news__month">сент</span>
+              </time>
 
-            <p class="news__text">
-              В нашей команде пополнение, Борис «Бритва» Стригунец, обладатель
-              множества титулов и наград пополнил наши стройные ряды. Спешите
-              записаться!
-            </p>
-          </li>
-        </ul>
+              <p class="news__text">
+                В нашей команде пополнение, Борис «Бритва» Стригунец, обладатель
+                множества титулов и наград пополнил наши стройные ряды. Спешите
+                записаться!
+              </p>
+            </li>
+          </ul>
 
-        <a href="#" class="news__to-all  button">Показать все</a>
+          <a href="#" class="news__to-all  button">Показать все</a>
+        </div>
       </section>
 
       <section class="reviews  slider">
-        <h2 class="reviews__heading">Отзывы о нас</h2>
+        <div class="reviews__wrapper">
+          <h2 class="reviews__heading">Отзывы о нас</h2>
 
-        <ul class="reviews__list  slider__list">
-          <li class="reviews__item  slider__item">
-            <p class="reviews__avatar">
-              <img src="http://placehold.it/51x51" alt="Фото автора" />
-            </p>
+          <ul class="reviews__list  slider__list">
+            <li class="reviews__item  slider__item">
+              <p class="reviews__avatar">
+                <img
+                  src="http://placehold.it/51x51"
+                  width="50"
+                  height="50"
+                  alt="Фото автора"
+                />
+              </p>
 
-            <cite class="reviews__author">Трэвис Баркер</cite>
+              <div class="reviews__item-wrapper">
+                <cite class="reviews__author">Трэвис Баркер</cite>
 
-            <blockquote class="reviews__text">
-              Спасибо за лысину! Был проездом в Москве, заскочил побриться,
-              чтобы было видно новую татуировку!
-            </blockquote>
-          </li>
-        </ul>
+                <blockquote class="reviews__text">
+                  Спасибо за лысину! Был проездом в Москве, заскочил побриться,
+                  чтобы было видно новую татуировку!
+                </blockquote>
+              </div>
+            </li>
+          </ul>
 
-        <p class="slider__controls">
-          <button class="slider__control  slider__control--current">
-            <span class="visually-hidden">Первый слайд</span>
-          </button>
-          <button class="slider__control">
-            <span class="visually-hidden">Второй слайд</span>
-          </button>
-          <button class="slider__control">
-            <span class="visually-hidden">Третий слайд</span>
-          </button>
-        </p>
+          <p class="slider__controls">
+            <button class="slider__control  slider__control--current">
+              <span class="visually-hidden">Первый слайд</span>
+            </button>
+            <button class="slider__control">
+              <span class="visually-hidden">Второй слайд</span>
+            </button>
+            <button class="slider__control">
+              <span class="visually-hidden">Третий слайд</span>
+            </button>
+          </p>
+        </div>
       </section>
     </main>
 
     <footer class="page-footer">
-      <div class="page-footer__contacts  contacts">
-        <p class="contacts__title">Барбершоп Бородинский</p>
+      <div class="page-footer__wrapper">
+        <div class="page-footer__contacts  contacts">
+          <p class="contacts__title">Барбершоп Бородинский</p>
 
-        <p class="contacts__address">
-          г. Санкт-Перетбург, ул.Большая Конюшенная 19/8
-        </p>
+          <p class="contacts__address">
+            г. Санкт-Перетбург, ул.Большая Конюшенная 19/8
+          </p>
 
-        <p href="#" class="contacts__phone  button button--dark">
-          +7 (812) 555-66-66
-        </p>
-      </div>
+          <p href="#" class="contacts__phone  button button--dark">
+            +7 (812) 555-66-66
+          </p>
+        </div>
 
-      <ul class="socials">
-        <li class="socials__item  socials__item--vk">
-          <a href="#"><span class="visually-hidden">Мы Вконтакте</span></a>
-        </li>
+        <ul class="socials">
+          <li class="socials__item  socials__item--vk">
+            <a href="#"><span class="visually-hidden">Мы Вконтакте</span></a>
+          </li>
 
-        <li class="socials__item  socials__item--fb">
-          <a href="#"><span class="visually-hidden">Мы в Фейсбуке</span></a>
-        </li>
+          <li class="socials__item  socials__item--fb">
+            <a href="#"><span class="visually-hidden">Мы в Фейсбуке</span></a>
+          </li>
 
-        <li class="socials__item  socials__item--in">
-          <a href="#"><span class="visually-hidden">Мы в Инстаграме</span></a>
-        </li>
-      </ul>
+          <li class="socials__item  socials__item--in">
+            <a href="#"><span class="visually-hidden">Мы в Инстаграме</span></a>
+          </li>
+        </ul>
 
-      <div class="copyright">
-        <p class="copyright__text">Разработано:</p>
-        <a href="#" class="copyright__link  button button--dark"
-          >HTML Academy</a
-        >
+        <div class="copyright">
+          <p class="copyright__text">Разработано:</p>
+          <a href="#" class="copyright__link  button button--dark"
+            >HTML Academy</a
+          >
+        </div>
       </div>
     </footer>
 
-    <section class="modal">
+    <section class="modal" style="display:none;">
       <h2 class="modal__heading">Личный кабинет</h2>
 
       <b class="modal__info">Введите свой логин и пароль, чтобы войти</b>

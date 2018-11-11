@@ -1,9 +1,10 @@
 .stats {
+  width: @mobile-width;
+  margin: 0 auto;
 }
 
 .stats__header {
-  padding: 31px 38px;
-  padding-bottom: 29px;
+  padding: 30px 40px;
 
   text-align: center;
   color: #000000;
@@ -27,6 +28,7 @@
 
 .stats__table {
   width: 100%;
+  border-spacing: unset;
 
   line-height: 18px;
   color: #ffffff;
@@ -67,5 +69,74 @@
   line-height: 27px;
   text-align: center;
   color: rgba(255, 255, 255, 0.3);
-  background-color: @bg-darkness;
+}
+
+@media (min-width: @tablet-width) {
+  .stats {
+    width: 640px;
+    margin-top: -185px;
+  }
+
+  .stats__header {
+    display: flex;
+    justify-content: space-between;
+
+    padding: 36px 40px;
+    padding-bottom: 30px;
+
+    text-align: left;
+  }
+
+  .stats__slogan {
+    font-size: 40px;
+    line-height: 40px;
+
+    text-transform: initial;
+  }
+
+  .stats__intro {
+    width: 230px;
+  }
+
+  .stats__body {
+    display: flex;
+    flex-wrap: wrap;
+    align-content: stretch;
+  }
+
+  .stats__row {
+    box-sizing: border-box;
+    flex-direction: column;
+    align-items: flex-start;
+
+    width: 50%;
+    padding: 30px;
+  }
+
+  .stats__value {
+    font-size: 72px;
+    line-height: 72px;
+  }
+
+  .stats__field {
+    font-size: 20px;
+    line-height: 27px;
+    text-align: left;
+  }
+}
+
+@media (min-width: @desktop-width) {
+  .stats {
+    display: flex;
+
+    width: 960px;
+    margin-top: -160px;
+  }
+
+  .stats__header {
+    flex-direction: column;
+
+    box-sizing: border-box;
+    width: 320px;
+  }
 }

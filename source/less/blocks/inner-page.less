@@ -3,6 +3,13 @@
   background-color: @bg-lightness;
 }
 
+.inner-page__wrapper {
+  box-sizing: border-box;
+  width: @mobile-width;
+  margin: 0 auto;
+  padding: 0 20px;
+}
+
 .inner-page__heading {
   margin: 0;
 
@@ -14,10 +21,21 @@
 }
 
 @media (min-width: @tablet-width) {
+  .inner-page__wrapper {
+    width: 640px;
+    padding: 0;
+  }
+
   .inner-page__heading {
     font-size: 40px;
     line-height: 40px;
 
     text-align: left;
+  }
+}
+
+@media (min-width: @desktop-width) {
+  .inner-page__wrapper {
+    width: 960px;
   }
 }

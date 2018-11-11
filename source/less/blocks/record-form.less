@@ -1,4 +1,5 @@
 .record-form {
+  box-sizing: border-box;
 }
 
 .record-form__name {
@@ -50,6 +51,15 @@
 }
 
 @media (min-width: @tablet-width) {
+  .record-form__name {
+    display: flex;
+  }
+
+  .record-form__contacts {
+    display: flex;
+    flex-direction: column;
+  }
+
   .record-form__legend {
     font-size: 30px;
     line-height: 30px;

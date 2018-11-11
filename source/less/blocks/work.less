@@ -1,6 +1,15 @@
 .work {
+  width: auto;
+
   color: #000000;
   background-color: @bg-lightness;
+}
+
+.work__wrapper {
+  box-sizing: border-box;
+  width: @mobile-width;
+  margin: 0 auto;
+  padding: 0 20px;
 }
 
 .work__heading {
@@ -45,9 +54,20 @@
 }
 
 @media (min-width: @tablet-width) {
+  .work__wrapper {
+    width: 640px;
+    padding: 0;
+  }
+
   .work__heading {
     font-size: 40px;
     line-height: 40px;
     text-align: left;
+  }
+}
+
+@media (min-width: @desktop-width) {
+  .work__wrapper {
+    width: 960px;
   }
 }

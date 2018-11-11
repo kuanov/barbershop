@@ -154,7 +154,7 @@
             value="admiral"
             checked
           />
-          <label class="record-form__label" for="beard-model-admiral">
+          <label class="record-form__radio-label" for="beard-model-admiral">
             адмирал
             <img
               class="record-form__pic"
@@ -170,7 +170,7 @@
             name="beard-model"
             value="lesorub"
           />
-          <label class="record-form__label" for="beard-model-lesorub">
+          <label class="record-form__radio-label" for="beard-model-lesorub">
             лесоруб
             <img
               class="record-form__pic"
@@ -186,7 +186,7 @@
             name="beard-model"
             value="polar"
           />
-          <label class="record-form__label" for="beard-model-polar">
+          <label class="record-form__radio-label" for="beard-model-polar">
             полярник
             <img
               class="record-form__pic"
@@ -202,7 +202,7 @@
             name="beard-model"
             value="boyarin"
           />
-          <label class="record-form__label" for="beard-model-boyarin">
+          <label class="record-form__radio-label" for="beard-model-boyarin">
             боярин
             <img class="record-form__pic" src="" alt="Модель бороды - боярин" />
           </label>
@@ -214,14 +214,14 @@
             name="beard-model"
             value="mudrec"
           />
-          <label class="record-form__label" for="beard-model-mudrec">
+          <label class="record-form__radio-label" for="beard-model-mudrec">
             мудрец
             <img class="record-form__pic" src="" alt="Модель бороды - мудрец" />
           </label>
         </fieldset>
 
-        <fieldset class="record-form__addtional-services">
-          <legend class="record-form__legend"></legend>
+        <fieldset class="record-form__additional-services">
+          <legend class="record-form__legend">Дополнительные услуги:</legend>
 
           <input
             class="input-checkbox"
@@ -231,7 +231,7 @@
             value="paint-beard"
             checked
           />
-          <label class="record-form__label" for="paint-beard"
+          <label class="record-form__checkbox-label" for="paint-beard"
             >Подкрасить бороду</label
           >
 
@@ -243,7 +243,7 @@
             value="wind-mustache"
             checked
           />
-          <label class="record-form__label" for="wind-mustache"
+          <label class="record-form__checkbox-label" for="wind-mustache"
             >Накрутить усы</label
           >
 
@@ -254,7 +254,7 @@
             name="additional-services"
             value="comb-beard"
           />
-          <label class="record-form__label" for="comb-beard"
+          <label class="record-form__checkbox-label" for="comb-beard"
             >Причесать бороду</label
           >
 
@@ -265,7 +265,7 @@
             name="additional-services"
             value="trim-hair"
           />
-          <label class="record-form__label" for="trim-hair"
+          <label class="record-form__checkbox-label" for="trim-hair"
             >Подровнять виски</label
           >
 
@@ -276,7 +276,7 @@
             name="additional-services"
             value="rm-gray-hair"
           />
-          <label class="record-form__label" for="rm-gray-hair"
+          <label class="record-form__checkbox-label" for="rm-gray-hair"
             >Убрать седину</label
           >
 
@@ -287,7 +287,7 @@
             name="additional-services"
             value="clean"
           />
-          <label class="record-form__label" for="clean"
+          <label class="record-form__checkbox-label" for="clean"
             >Отполировать лысину</label
           >
         </fieldset>
@@ -335,7 +335,7 @@
       </div>
     </footer>
 
-    <section class="popup">
+    <section class="popup" style="display:none">
       <h2 class="popup__title">Неудача</h2>
 
       <p class="popup__description">
@@ -345,7 +345,7 @@
       <button class="button" type="button">Ok</button>
     </section>
 
-    <section class="popup">
+    <section class="popup" style="display: none">
       <h2 class="popup__title">Это успех!</h2>
 
       <p class="popup__description">

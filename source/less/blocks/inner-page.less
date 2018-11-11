@@ -1,0 +1,23 @@
+.inner-page {
+  color: #000000;
+  background-color: @bg-lightness;
+}
+
+.inner-page__heading {
+  margin: 0;
+
+  font-family: "pt_sans_narrowbold", Arial, sans-serif;
+  font-size: 30px;
+  line-height: 30px;
+  text-transform: uppercase;
+  text-align: center;
+}
+
+@media (min-width: @tablet-width) {
+  .inner-page__heading {
+    font-size: 40px;
+    line-height: 40px;
+
+    text-align: left;
+  }
+}

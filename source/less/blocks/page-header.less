@@ -2,7 +2,6 @@
   display: flex;
   flex-direction: column;
 
-  font-family: "pt_sans_narrowbold", Arial, sans-serif;
   line-height: 24px;
   text-transform: uppercase;
   background-color: #242424;
@@ -18,26 +17,40 @@
 
 @media (min-width: @tablet-width) {
   .page-header {
-    background-image: url("../img/back-tablet.jpg");
-    background-position: 0 0;
+    background-color: #000000;
+    background-image: url("../img/back-desktop.jpg");
+    background-position: center -9px;
     background-repeat: no-repeat;
   }
 
   .page-header__logo {
-    height: 400px;
-
     order: 2;
+
+    display: block;
+    width: 100%;
+    height: 400px;
+  }
+
+  .page-header__logo-image {
+    display: block;
+    width: 370px;
+    height: auto;
+    margin: 0 auto;
+    margin-top: 40px;
   }
 }
 
 @media (min-width: @desktop-width) {
   .page-header {
-    background-image: url("../img/back-desktop.jpg");
-    background-position: 0 0;
-    background-repeat: no-repeat;
+    background-position: center 0;
+    background-size: cover;
   }
 
   .page-header__logo {
     height: 648px;
+  }
+
+  .page-header__logo-image {
+    margin-top: 57px;
   }
 }

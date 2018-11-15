@@ -3,4 +3,33 @@
 
 .slider__controls {
   margin: 0;
+  margin-top: 25px;
+
+  text-align: center;
+}
+
+.slider__control {
+  width: 10px;
+  height: 10px;
+  padding: 0;
+
+  border: 1px solid #ffffff;
+  background-color: transparent;
+  cursor: pointer;
+
+  transform: rotate(45deg);
+
+  &:not(:last-child) {
+    margin-right: 25px;
+  }
+
+  &--current {
+    background-color: #ffffff;
+  }
+}
+
+@media (min-width: @tablet-width) {
+  .slider__controls {
+    display: none;
+  }
 }

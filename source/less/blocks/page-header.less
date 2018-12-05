@@ -18,10 +18,6 @@
 @media (min-width: @tablet-width) {
   .page-header {
     background-color: #000000;
-    background-image: url("../img/back-tablet.jpg");
-    background-position: center -9px;
-    background-repeat: no-repeat;
-    background-size: cover;
   }
 
   .page-header__logo {
@@ -30,6 +26,15 @@
     display: block;
     width: 100%;
     height: 400px;
+
+    background-image: url("../img/bground-main.jpg");
+    background-position: center 0;
+    background-repeat: no-repeat;
+    background-size: 1200px auto;
+
+    @media (min-resolution: @retina-dpi), (min-resolution: @retina-dppx) {
+      background-image: url("../../img/bground-main@2x.jpg");
+    }
   }
 
   .page-header__logo-image {
@@ -43,12 +48,12 @@
 
 @media (min-width: @desktop-width) {
   .page-header {
-    background-position: center 0;
-    background-size: cover;
   }
 
   .page-header__logo {
     height: 648px;
+
+    background-size: cover;
   }
 
   .page-header__logo-image {

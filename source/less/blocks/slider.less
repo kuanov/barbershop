@@ -26,10 +26,20 @@
   &--current {
     background-color: #ffffff;
   }
+
+  &--dark {
+    border-color: #000000;
+  }
+
+  &--dark-current {
+    background-color: #000000;
+  }
 }
 
 @media (min-width: @tablet-width) {
   .slider__controls {
-    display: none;
+    &--mobile {
+      display: none;
+    }
   }
 }

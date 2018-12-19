@@ -6,10 +6,13 @@
     <meta http-equiv="X-UA-Compatible" content="ie=edge" />
     <title>HTML Academy: Барбершоп «Бородинский»</title>
 
-    <link rel="stylesheet" href="css/style.css" />
+    <link rel="stylesheet" href="css/style.min.css" />
   </head>
 
   <body>
+    <div style="display:none">
+      <include src="build/img/sprite.svg"></include>
+    </div>
     <header class="page-header">
       <a class="page-header__logo">
         <picture>
@@ -59,21 +62,8 @@
                 class="user-navigation__link user-navigation__login"
                 href="login.html"
               >
-                <svg
-                  class="user-navigation__login-icon"
-                  width="16"
-                  height="16"
-                  xmlns="http://www.w3.org/2000/svg"
-                  viewBox="0 0 16 16"
-                >
-                  <polygon
-                    class="cls-1"
-                    points="0 7 7.01 7 7.01 4.06 10.96 8.01 7.01 11.91 7.01 9.06 0 9.02 0 7"
-                  />
-                  <polygon
-                    class="cls-1"
-                    points="7.01 0 7.01 2 14.03 2 14.03 13.99 7.01 13.99 7.01 16 16 16 16 0 7.01 0"
-                  />
+                <svg class="user-navigation__login-icon">
+                  <use xlink:href="#icon-login"></use>
                 </svg>
                 Войти
               </a>
@@ -245,6 +235,21 @@
               <li class="reviews__item  slider__item">
                 <p class="reviews__avatar">
                   <picture>
+                    <source
+                      type="image/webp"
+                      media="(min-width:1200px)"
+                      srcset="img/reviewer-desktop.webp"
+                    />
+                    <source
+                      type="image/webp"
+                      media="(min-width:768px)"
+                      srcset="img/reviewer-tablet.webp"
+                    />
+                    <source
+                      type="image/webp"
+                      srcset="img/reviewer-tablet.webp"
+                    />
+
                     <source
                       media="(min-width:1200px)"
                       srcset="img/reviewer-desktop.jpg"

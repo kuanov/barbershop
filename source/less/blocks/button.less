@@ -1,13 +1,14 @@
 .button {
-  display: inline-block;
-  padding: 12px 30px;
+  display: block;
+  margin: 0;
+  padding-top: 12px;
+  padding-bottom: 12px;
 
   font-family: "pt_sans_narrowbold", Arial, sans-serif;
   font-size: 18px;
   line-height: 24px;
 
   text-align: center;
-  vertical-align: middle;
   text-transform: uppercase;
   text-decoration: none;
   color: #000000;
@@ -27,8 +28,23 @@
     border: 1px solid #d5c9bd;
   }
 
-  &--dark {
+  &--inverse {
     color: #ffffff;
+    border-color: #3f3f3f;
+
+    &:hover,
+    &:focus {
+      border: 1px solid #545454;
+    }
+
+    &:active {
+      color: #ffffff;
+      background-color: #252525;
+
+      border: 1px solid #252525;
+
+      opacity: 0.3;
+    }
   }
 
   &--huge {
@@ -36,5 +52,12 @@
 
     font-size: 24px;
     line-height: 30px;
+  }
+}
+
+@media (min-width: @tablet-width) {
+  .button {
+    box-sizing: border-box;
+    width: 160px;
   }
 }

@@ -13,7 +13,7 @@
     <header class="page-header">
       <a class="page-header__logo">
         <picture>
-          <source media="(min-width: 960px)" srcset="img/logo-desktop.svg" />
+          <source media="(min-width: 1200px)" srcset="img/logo-desktop.svg" />
           <source media="(min-width: 768px)" srcset="img/logo-tablet.svg" />
           <img
             class="page-header__logo-image"
@@ -300,33 +300,37 @@
           <p class="contacts__title">Барбершоп Бородинский</p>
 
           <p class="contacts__address">
-            г. Санкт-Перетбург, ул.Большая Конюшенная 19/8
+            г. Санкт-Петербург, ул.Большая Конюшенная 19/8
           </p>
 
-          <p href="#" class="contacts__phone  button button--dark">
-            +7 (812) 555-66-66
+          <p href="#" class="contacts__phone">
+            <span class="contacts__phone-text">Тел.: </span> +7 (812) 555-66-66
           </p>
         </div>
 
-        <ul class="socials">
-          <li class="socials__item  socials__item--vk">
-            <a href="#"><span class="visually-hidden">Мы Вконтакте</span></a>
-          </li>
+        <div class="socials">
+          <b class="socials__slogan">Давайте дружить!</b>
+          <div class="socials__list">
+            <a class="socials__item  socials__item--vk" href="#"
+              ><span class="visually-hidden">Мы Вконтакте</span></a
+            >
 
-          <li class="socials__item  socials__item--fb">
-            <a href="#"><span class="visually-hidden">Мы в Фейсбуке</span></a>
-          </li>
+            <a class="socials__item  socials__item--fb" href="#"
+              ><span class="visually-hidden">Мы в Фейсбуке</span></a
+            >
 
-          <li class="socials__item  socials__item--in">
-            <a href="#"><span class="visually-hidden">Мы в Инстаграме</span></a>
-          </li>
-        </ul>
+            <a class="socials__item  socials__item--in" href="#"
+              ><span class="visually-hidden">Мы в Инстаграме</span></a
+            >
+          </div>
+        </div>
 
         <div class="copyright">
           <p class="copyright__text">Разработано:</p>
           <a
-            class="copyright__link  button button--dark"
-            href="https://htmlacademy.ru"
+            class="button button--inverse"
+            href="https://htmlacademy.ru/intensive/adaptive"
+            target="_blank"
           >
             HTML Academy
           </a>

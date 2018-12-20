@@ -4,6 +4,7 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+    <meta name="format-detection" content="telephone=no" />
     <title>HTML Academy: Барбершоп «Бородинский»</title>
     <link
       rel="preload"
@@ -23,31 +24,37 @@
   </head>
 
   <body>
+    <div style="display:none">
+      <include src="build/img/sprite.svg"></include>
+    </div>
     <header class="page-header">
       <a class="page-header__logo">
-        <img
-          class="page-header__logo-image"
-          src="img/logo-mobile.png"
-          width="226"
-          height="30"
-          alt="Логотип Барбершоп «Бородинский»"
-        />
+        <picture>
+          <source media="(min-width: 1200px)" srcset="img/logo-desktop.svg" />
+          <source media="(min-width: 768px)" srcset="img/logo-tablet.svg" />
+          <img
+            class="page-header__logo-image"
+            src="img/logo-mobile.svg"
+            width="226"
+            height="30"
+            alt="Логотип Барбершоп «Бородинский»"
+          />
+        </picture>
       </a>
 
-      <nav class="main-navigation">
-        <!-- <p class="main-navigation__current">Главная</p> -->
-        <!--
-          <button class="main-navigation__burger">
-            <span class="visually-hidden">Открыть меню</span>
-          </button>
-        -->
+      <nav
+        class="main-navigation  main-navigation--closed main-navigation--no-js"
+      >
+        <button class="main-navigation__toggle" type="button">
+          <span class="visually-hidden">Открыть меню</span>
+        </button>
 
         <div class="main-navigation__wrapper">
           <ul class="main-navigation__list  site-navigation">
-            <li class="site-navigation__item  site-navigation__item--active">
+            <li class="site-navigation__item">
               <a class="site-navigation__link" href="index.html">Главная</a>
             </li>
-            <li class="site-navigation__item">
+            <li class="site-navigation__item  site-navigation__item--active">
               <a class="site-navigation__link">Наши Работы</a>
             </li>
             <li class="site-navigation__item">
@@ -57,103 +64,279 @@
               <a class="site-navigation__link" href="#">Контакты</a>
             </li>
             <li class="site-navigation__item">
-              <a class="site-navigation__link" href="https://htmlacademy.ru"
-                >HTML Academy</a
-              >
+              <a class="site-navigation__link" href="https://htmlacademy.ru">
+                HTML Academy
+              </a>
             </li>
           </ul>
 
           <ul class="main-navigation__list  user-navigation">
             <li class="user-navigation__item">
-              <a class="user-navigation__link" href="login.html">Войти</a>
+              <a
+                class="user-navigation__link user-navigation__login"
+                href="login.html"
+              >
+                <svg class="user-navigation__login-icon">
+                  <use xlink:href="#icon-login"></use>
+                </svg>
+                Войти
+              </a>
             </li>
           </ul>
         </div>
       </nav>
     </header>
 
-    <main>
-      <section class="work">
-        <div class="work__wrapper">
-          <h2 class="work__heading">Наши Работы</h2>
+    <main class="page-main  page-main--inner">
+      <header class="page-title">
+        <h1 class="page-title__titel">Наши Работы</h1>
+        <a class="button" href="#">На главную</a>
+      </header>
 
-          <ul class="work__list">
-            <li class="work__item">
-              <img
-                class="work__image"
-                src="http://placehold.it/280x480"
-                alt="Работа номер 1"
+      <section class="works">
+        <article class="works-item  works-item--work-of-month">
+          <p class="works-item__image-wrapper">
+            <picture>
+              <source
+                type="image/webp"
+                media="(min-width: 1200px)"
+                srcset="img/photo-1-desktop.webp 1x"
+              />
+              <source
+                type="image/webp"
+                media="(min-width: 768px)"
+                srcset="
+                  img/photo-1-tablet.webp    1x,
+                  img/photo-1-tablet@2x.webp 2x
+                "
+              />
+              <source
+                type="image/webp"
+                srcset="
+                  img/photo-1-mobile.webp    1x,
+                  img/photo-1-mobile@2x.webp 2x
+                "
               />
 
-              <h3 class="work__subject">Лжепётр Мчиславский</h3>
-
-              <p class="work__review">
-                Где я только не стригся, но так как делаете это вы — не умеет
-                никто другой! Еще раз спасибо и до скорого!
-              </p>
-
-              <ul class="work__types">
-                <li class="work__type">Стрижка</li>
-                <li class="work__type">Бритье</li>
-                <li class="work__type">Усы</li>
-              </ul>
-            </li>
-
-            <li class="work__item">
+              <source
+                media="(min-width: 1200px)"
+                srcset="
+                  img/photo-1-desktop.jpg    1x,
+                  img/photo-1-desktop@2x.jpg 2x
+                "
+              />
+              <source
+                media="(min-width: 768px)"
+                srcset="img/photo-1-tablet.jpg 1x, img/photo-1-tablet@2x.jpg 2x"
+              />
               <img
-                class="work__image"
-                src="http://placehold.it/280x176"
-                alt="Работа номер 2"
+                class="works-item__image"
+                src="img/photo-1-mobile.jpg"
+                srcset="img/photo-1-mobile@2x.jpg 2x"
+                alt="Фото нашей работы"
+              />
+            </picture>
+          </p>
+
+          <div class="works-item__review">
+            <h2 class="works-item__title">Лжепётр Мчиславский</h2>
+            <blockquote class="works-item__text">
+              Где я только не стригся, но так как делаете это вы — не умеет
+              никто другой! Еще раз спасибо и до скорого!
+            </blockquote>
+            <ul class="works-item__types">
+              <li class="works-item__types works-item__types--haircut">
+                Стрижка
+              </li>
+              <li class="works-item__types works-item__types--shaving">
+                Бритье
+              </li>
+              <li class="works-item__types works-item__types--mustache">Усы</li>
+            </ul>
+          </div>
+        </article>
+
+        <article class="works-item  works-item--work-of-month">
+          <p class="works-item__image-wrapper">
+            <picture>
+              <source
+                type="image/webp"
+                media="(min-width: 1200px)"
+                srcset="
+                  img/photo-2-desktop.webp    1x,
+                  img/photo-2-desktop@2x.webp 2x
+                "
+              />
+              <source
+                type="image/webp"
+                media="(min-width: 768px)"
+                srcset="
+                  img/photo-2-tablet.webp    1x,
+                  img/photo-2-tablet@2x.webp 2x
+                "
+              />
+              <source
+                type="image/webp"
+                srcset="
+                  img/photo-2-mobile.webp    1x,
+                  img/photo-2-mobile@2x.webp 2x
+                "
               />
 
-              <h3 class="work__subject">Саша Мальцев</h3>
-
-              <p class="work__review">
-                Попросил омолодить и омолодили! Кто теперь скажет, что мне 45?
-              </p>
-
-              <ul class="work__types">
-                <li class="work__type">Стрижка</li>
-              </ul>
-            </li>
-
-            <li class="work__item">
+              <source
+                media="(min-width: 1200px)"
+                srcset="
+                  img/photo-2-desktop.jpg    1x,
+                  img/photo-2-desktop@2x.jpg 2x
+                "
+              />
+              <source
+                media="(min-width: 768px)"
+                srcset="img/photo-2-tablet.jpg 1x, img/photo-2-tablet@2x.jpg 2x"
+              />
               <img
-                class="work__image"
-                src="http://placehold.it/280x176"
-                alt="Работа номер 1"
+                class="works-item__image"
+                src="img/photo-2-mobile.jpg"
+                srcset="img/photo-2-mobile@2x.jpg 2x"
+                alt="Фото нашей работы"
+              />
+            </picture>
+          </p>
+
+          <div class="works-item__review">
+            <h2 class="works-item__title">Саша Мальцев</h2>
+            <blockquote class="works-item__text">
+              Попросил омолодить и омолодили! Кто теперь скажет, что мне 45?
+            </blockquote>
+            <ul class="works-item__types">
+              <li class="works-item__types works-item__types--haircut">
+                Стрижка
+              </li>
+            </ul>
+          </div>
+        </article>
+
+        <article class="works-item  works-item--work-of-month">
+          <p class="works-item__image-wrapper">
+            <picture>
+              <source
+                type="image/webp"
+                media="(min-width: 1200px)"
+                srcset="
+                  img/photo-3-desktop.webp    1x,
+                  img/photo-3-desktop@2x.webp 2x
+                "
+              />
+              <source
+                type="image/webp"
+                media="(min-width: 768px)"
+                srcset="
+                  img/photo-3-tablet.webp    1x,
+                  img/photo-3-tablet@2x.webp 2x
+                "
+              />
+              <source
+                type="image/webp"
+                srcset="
+                  img/photo-3-mobile.webp    1x,
+                  img/photo-3-mobile@2x.webp 2x
+                "
               />
 
-              <h3 class="work__subject">Владимир Иваныч</h3>
-
-              <p class="work__review">К зимнему сезону - готов!</p>
-
-              <ul class="work__types">
-                <li class="work__type">Борода</li>
-                <li class="work__type">Усы</li>
-              </ul>
-            </li>
-
-            <li class="work__item">
+              <source
+                media="(min-width: 1200px)"
+                srcset="
+                  img/photo-3-desktop.jpg    1x,
+                  img/photo-3-desktop@2x.jpg 2x
+                "
+              />
+              <source
+                media="(min-width: 768px)"
+                srcset="img/photo-3-tablet.png 1x, img/photo-3-tablet@2x.jpg 2x"
+              />
               <img
-                class="work__image"
-                src="http://placehold.it/280x480"
-                alt="Работа номер 1"
+                class="works-item__image"
+                src="img/photo-3-mobile.jpg"
+                srcset="img/photo-3-mobile@2x.jpg 2x"
+                alt="Фото нашей работы"
+              />
+            </picture>
+          </p>
+
+          <div class="works-item__review">
+            <h2 class="works-item__title">Владимир Иваныч</h2>
+            <blockquote class="works-item__text">
+              К зимнему сезону - готов!
+            </blockquote>
+            <ul class="works-item__types">
+              <li class="works-item__types works-item__types--shaving">
+                Борода
+              </li>
+              <li class="works-item__types works-item__types--mustache">Усы</li>
+            </ul>
+          </div>
+        </article>
+
+        <article class="works-item  works-item--work-of-month">
+          <p class="works-item__image-wrapper">
+            <picture>
+              <source
+                type="image/webp"
+                media="(min-width: 1200px)"
+                srcset="
+                  img/photo-4-desktop.webp    1x,
+                  img/photo-4-desktop@2x.webp 2x
+                "
+              />
+              <source
+                type="image/webp"
+                media="(min-width: 768px)"
+                srcset="
+                  img/photo-4-tablet.webp    1x,
+                  img/photo-4-tablet@2x.webp 2x
+                "
+              />
+              <source
+                type="image/webp"
+                srcset="
+                  img/photo-4-mobile.webp    1x,
+                  img/photo-4-mobile@2x.webp 2x
+                "
               />
 
-              <h3 class="work__subject">Винстон Синий</h3>
+              <source
+                media="(min-width: 1200px)"
+                srcset="
+                  img/photo-4-desktop.jpg    1x,
+                  img/photo-4-desktop@2x.jpg 2x
+                "
+              />
+              <source
+                media="(min-width: 768px)"
+                srcset="img/photo-4-tablet.jpg 1x, img/photo-4-tablet@2x.jpg 2x"
+              />
+              <img
+                class="works-item__image"
+                src="img/photo-4-mobile.jpg"
+                srcset="img/photo-4-mobile@2x.jpg 2x"
+                alt="Фото нашей работы"
+              />
+            </picture>
+          </p>
 
-              <p class="work__review">
-                Как только заростаю и волосы начинают мешать видеть — бегом в
-                Бородинский!
-              </p>
-
-              <ul class="work__types">
-                <li class="work__type">Стрижка</li>
-              </ul>
-            </li>
-          </ul>
-        </div>
+          <div class="works-item__review">
+            <h2 class="works-item__title">Винстон Синий</h2>
+            <blockquote class="works-item__text">
+              Как только заростаю и волосы начинают мешать видеть — бегом в
+              Бородинский!
+            </blockquote>
+            <ul class="works-item__types">
+              <li class="works-item__types works-item__types--haircut">
+                Стрижка
+              </li>
+            </ul>
+          </div>
+        </article>
       </section>
 
       <section class="price-list">
@@ -211,37 +394,44 @@
           <p class="contacts__title">Барбершоп Бородинский</p>
 
           <p class="contacts__address">
-            г. Санкт-Перетбург, ул.Большая Конюшенная 19/8
+            г. Санкт-Петербург, ул.Большая Конюшенная 19/8
           </p>
 
-          <p href="#" class="contacts__phone  button button--dark">
-            +7 (812) 555-66-66
-          </p>
+          <a href="tel:+7 (812) 555-66-66" class="contacts__phone">
+            <span class="contacts__phone-text">Тел.: </span> +7 (812) 555-66-66
+          </a>
         </div>
 
-        <ul class="socials">
-          <li class="socials__item  socials__item--vk">
-            <a href="#"><span class="visually-hidden">Мы Вконтакте</span></a>
-          </li>
+        <div class="socials">
+          <b class="socials__slogan">Давайте дружить!</b>
+          <div class="socials__list">
+            <a class="socials__item  socials__item--vk" href="#"
+              ><span class="visually-hidden">Мы Вконтакте</span></a
+            >
 
-          <li class="socials__item  socials__item--fb">
-            <a href="#"><span class="visually-hidden">Мы в Фейсбуке</span></a>
-          </li>
+            <a class="socials__item  socials__item--fb" href="#"
+              ><span class="visually-hidden">Мы в Фейсбуке</span></a
+            >
 
-          <li class="socials__item  socials__item--in">
-            <a href="#"><span class="visually-hidden">Мы в Инстаграме</span></a>
-          </li>
-        </ul>
+            <a class="socials__item  socials__item--in" href="#"
+              ><span class="visually-hidden">Мы в Инстаграме</span></a
+            >
+          </div>
+        </div>
 
         <div class="copyright">
           <p class="copyright__text">Разработано:</p>
           <a
-            class="copyright__link  button button--dark"
-            href="https://htmlacademy.ru"
-            >HTML Academy</a
+            class="button button--inverse"
+            href="https://htmlacademy.ru/intensive/adaptive"
+            target="_blank"
           >
+            HTML Academy
+          </a>
         </div>
       </div>
     </footer>
+
+    <script src="js/burger.js"></script>
   </body>
 </html>

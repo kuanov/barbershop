@@ -4,6 +4,7 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+    <meta name="format-detection" content="telephone=no" />
     <title>HTML Academy: Барбершоп «Бородинский»</title>
     <link
       rel="preload"
@@ -86,7 +87,7 @@
       </nav>
     </header>
 
-    <main class="main-page">
+    <main class="page-main">
       <h1 class="visually-hidden">Барбершоп «Бородинский»</h1>
 
       <section class="stats">
@@ -251,30 +252,46 @@
                     <source
                       type="image/webp"
                       media="(min-width:1200px)"
-                      srcset="img/reviewer-desktop.webp"
+                      srcset="
+                        img/reviewer-desktop.webp    1x,
+                        img/reviewer-desktop@2x.webp 2x
+                      "
                     />
                     <source
                       type="image/webp"
                       media="(min-width:768px)"
-                      srcset="img/reviewer-tablet.webp"
+                      srcset="
+                        img/reviewer-tablet.webp    1x,
+                        img/reviewer-tablet@2x.webp 2x
+                      "
                     />
                     <source
                       type="image/webp"
-                      srcset="img/reviewer-tablet.webp"
+                      srcset="
+                        img/reviewer-mobile.webp    1x,
+                        img/reviewer-mobile@2x.webp 2x
+                      "
                     />
 
                     <source
                       media="(min-width:1200px)"
-                      srcset="img/reviewer-desktop.jpg"
+                      srcset="
+                        img/reviewer-desktop.jpg    1x,
+                        img/reviewer-desktop@2x.jpg 2x
+                      "
                     />
                     <source
                       media="(min-width:768px)"
-                      srcset="img/reviewer-tablet.jpg"
+                      srcset="
+                        img/reviewer-tablet.jpg    1x,
+                        img/reviewer-tablet@2x.jpg 2x
+                      "
                     />
                     <img
                       class="reviews__image"
-                      src="img/reviewer-mobile.png"
+                      src="img/reviewer-mobile.jpg"
                       alt="Фото автора"
+                      srcset="img/reviewer-mobile@2x.jpg 2x"
                     />
                   </picture>
                 </p>
@@ -321,9 +338,9 @@
             г. Санкт-Петербург, ул.Большая Конюшенная 19/8
           </p>
 
-          <p href="#" class="contacts__phone">
+          <a href="tel:+7 (812) 555-66-66" class="contacts__phone">
             <span class="contacts__phone-text">Тел.: </span> +7 (812) 555-66-66
-          </p>
+          </a>
         </div>
 
         <div class="socials">

@@ -1,8 +1,10 @@
 .advantages {
+  color: #f7f4f1;
+}
+
+.advantages__wrapper {
   width: @mobile-width;
   margin: 0 auto;
-
-  color: #f7f4f1;
   background-color: #242424;
 }
 
@@ -54,6 +56,10 @@
 
 @media (min-width: @tablet-width) {
   .advantages {
+    background-color: @bg-darkness;
+  }
+
+  .advantages__wrapper {
     width: 640px;
     background-color: @bg-darkness;
   }
@@ -85,6 +91,9 @@
 
 @media (min-width: @desktop-width) {
   .advantages {
+  }
+
+  .advantages__wrapper {
     width: 960px;
     padding-bottom: 35px;
   }

@@ -21,6 +21,7 @@
   }
 
   .page-header__logo {
+    position: relative;
     order: 2;
 
     display: block;
@@ -34,6 +35,43 @@
 
     @media (min-resolution: @retina-dpi), (min-resolution: @retina-dppx) {
       background-image: url("../../img/bg-main@2x.jpg");
+    }
+  }
+
+  .page-header--inner .page-header__logo {
+    height: 215px;
+    background-size: cover;
+    background-position: center -70px;
+
+    &::before,
+    &::after {
+      position: absolute;
+      bottom: 0;
+      height: 45px;
+      width: 50%;
+      content: "";
+    }
+
+    &::before {
+      left: 0;
+      background-image: linear-gradient(
+        to right top,
+        @bg-lightness,
+        @bg-lightness 49%,
+        transparent 50%,
+        transparent 100%
+      );
+    }
+
+    &::after {
+      right: 0;
+      background-image: linear-gradient(
+        to right bottom,
+        transparent,
+        transparent 50%,
+        @bg-lightness 51%,
+        @bg-lightness 100%
+      );
     }
   }
 
@@ -51,6 +89,16 @@
     height: 648px;
 
     background-size: cover;
+    background-position: center 0;
+
+    &::before,
+    &::after {
+      height: 65px;
+    }
+  }
+
+  .page-header--inner .page-header__logo {
+    height: 308px;
   }
 
   .page-header__logo-image {

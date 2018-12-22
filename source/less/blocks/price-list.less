@@ -1,16 +1,53 @@
 .price-list {
+  color: #ffffff;
+  counter-reset: my-counter;
+}
+
+.price-list__wrapper {
+  position: relative;
   box-sizing: border-box;
   width: @mobile-width;
   margin: 0 auto;
-  padding: 0 20px;
-
-  color: #ffffff;
+  padding: 20px;
+  padding-top: 35px;
   background-color: @bg-darkness;
+
+  &::before,
+  &::after {
+    position: absolute;
+    top: 100%;
+    height: 35px;
+    width: 50%;
+    content: "";
+  }
+
+  &::before {
+    left: 0;
+    background-image: linear-gradient(
+      to right top,
+      transparent,
+      transparent 49%,
+      #353535 50%,
+      #353535 100%
+    );
+  }
+
+  &::after {
+    right: 0;
+    background-image: linear-gradient(
+      to right bottom,
+      #353535,
+      #353535 50%,
+      transparent 51%,
+      transparent 100%
+    );
+  }
 }
 
 .price-list__heading {
   width: 100%;
   margin: 0;
+  margin-bottom: 20px;
 
   font-family: "pt_sans_narrowbold", Arial, sans-serif;
   font-size: 30px;
@@ -20,36 +57,80 @@
 }
 
 .price-list__table {
+  width: 100%;
   border-spacing: unset;
 
   font-size: 20px;
 }
 
+.price-list__table-row {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+
+  margin-bottom: 15px;
+}
+
 .price-list__field {
   padding: 0;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
 }
 
 .price-list__value {
   padding: 0;
+  padding-top: 2px;
 }
 
 .price-list__field-name {
   font-family: "pt_sans_narrowbold", Arial, sans-serif;
 }
 
+.price-list__field-description {
+  &::before {
+    content: "(";
+  }
+
+  &::after {
+    content: ")";
+  }
+}
+
 .price-list__sale {
+  display: block;
+  padding: 20px;
+  padding-left: 113px;
+
   font-size: 20px;
   font-weight: normal;
+
+  border: 1px solid rgba(255, 255, 255, 0.1);
+
+  background-repeat: no-repeat;
+  background-position: 20px center;
+  background-size: 56px 56px;
+  background-image: url(../../img/clock.svg);
 }
 
 @media (min-width: @tablet-width) {
   .price-list {
+    background-color: @bg-darkness;
+    padding-top: 40px;
+    padding-bottom: 55px;
+  }
+  .price-list__wrapper {
     display: flex;
     flex-direction: column;
     flex-wrap: wrap;
 
     width: 640px;
     padding: 0;
+
+    &::before,
+    &::after {
+      display: none;
+    }
   }
   .price-list__heading {
     font-size: 40px;
@@ -57,32 +138,120 @@
     text-align: left;
   }
 
+  .price-list__table {
+    margin-bottom: 15px;
+  }
+
+  .price-list__table-row {
+    justify-content: flex-start;
+    margin-bottom: 0;
+
+    border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+
+    &:last-child {
+      border-bottom: none;
+    }
+
+    &::before {
+      width: 70px;
+      padding: 14px 0;
+
+      border-right: 1px solid rgba(255, 255, 255, 0.1);
+      text-align: center;
+      color: rgba(255, 255, 255, 0.1);
+      counter-increment: my-counter;
+      content: counter(my-counter);
+    }
+  }
+
+  .price-list__table {
+    border: 1px solid rgba(255, 255, 255, 0.1);
+  }
+
+  .price-list__field {
+    flex-grow: 1;
+    flex-direction: row;
+  }
+
+  .price-list__field-name {
+    box-sizing: border-box;
+    width: 250px;
+    padding: 14px 0;
+    padding-left: 20px;
+
+    border-right: 1px solid rgba(255, 255, 255, 0.1);
+  }
+
+  .price-list__field-description {
+    box-sizing: border-box;
+    width: 160px;
+    padding: 14px 0;
+    padding-left: 20px;
+
+    border-right: 1px solid rgba(255, 255, 255, 0.1);
+    &::before,
+    &::after {
+      display: none;
+    }
+  }
+
+  .price-list__value {
+    box-sizing: border-box;
+    width: 160px;
+    padding: 14px 0;
+    padding-left: 20px;
+  }
+
   .price-list__sale {
+    padding: 42px 0;
+    padding-left: 185px;
     font-family: "pt_sans_narrowbold", Arial, sans-serif;
     font-size: 30px;
     line-height: 30px;
     text-transform: uppercase;
+
+    background-size: auto auto;
+    background-position: 25px center;
+  }
+
+  .price-list__sale br {
+    display: none;
   }
 }
 
 @media (min-width: @desktop-width) {
-  .price-list {
+  .price-list__wrapper {
+    width: 960px;
     flex-direction: row;
     justify-content: space-between;
+  }
 
-    width: 960px;
+  .price-list__heading {
+    width: 100%;
   }
 
   .price-list__table {
-    width: 630px;
+    box-sizing: border-box;
+    width: 640px;
+    margin: 0;
   }
 
   .price-list__sale {
+    box-sizing: border-box;
     width: 270px;
+    padding: 0;
+    padding-top: 200px;
 
     font: inherit;
     font-size: 20px;
     text-transform: initial;
     text-align: center;
+
+    background-position: center 30px;
+    background-size: 142px 139px;
+  }
+
+  .price-list__sale br {
+    display: block;
   }
 }

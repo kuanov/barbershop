@@ -27,8 +27,8 @@
     <div style="display:none">
       <include src="build/img/sprite.svg"></include>
     </div>
-    <header class="page-header  page-header--inner">
-      <a class="page-header__logo">
+    <header class="page-header page-header--inner">
+      <a class="page-header__logo" href="index.html">
         <picture>
           <source media="(min-width: 1200px)" srcset="img/logo-desktop.svg" />
           <source media="(min-width: 768px)" srcset="img/logo-tablet.svg" />
@@ -51,20 +51,26 @@
 
         <div class="main-navigation__wrapper">
           <ul class="main-navigation__list  site-navigation">
-            <li class="site-navigation__item  site-navigation__item--active">
-              <a class="site-navigation__link">Главная</a>
+            <li class="site-navigation__item">
+              <a class="site-navigation__link" href="index.html">Главная</a>
             </li>
             <li class="site-navigation__item">
               <a class="site-navigation__link" href="photo.html">Наши Работы</a>
             </li>
             <li class="site-navigation__item">
-              <a class="site-navigation__link" href="form.html">Записаться</a>
+              <a class="site-navigation__link  site-navigation__item--active"
+                >Записаться</a
+              >
             </li>
             <li class="site-navigation__item">
               <a class="site-navigation__link" href="#">Контакты</a>
             </li>
             <li class="site-navigation__item">
-              <a class="site-navigation__link" href="https://htmlacademy.ru">
+              <a
+                class="site-navigation__link"
+                href="https://htmlacademy.ru"
+                target="_blank"
+              >
                 HTML Academy
               </a>
             </li>
@@ -88,60 +94,65 @@
     </header>
 
     <main class="inner-page">
-      <div class="inner-page__wrapper">
-        <h2 class="inner-page__heading">Запись на стрижку</h2>
+      <header class="page-title">
+        <h1 class="page-title__title">Запись на стрижку</h1>
+        <a class="page-title__button button" href="index.html">На главную</a>
+      </header>
 
-        <form
-          class="record-form"
-          name="recordForm"
-          action="https://echo.htmlacademy.ru"
-          method="POST"
-        >
-          <fieldset class="record-form__name">
+      <form
+        class="record-form"
+        name="recordForm"
+        action="https://echo.htmlacademy.ru"
+        method="POST"
+      >
+        <fieldset class="record-form__name">
+          <div class="record-form__fieldset-wrapper">
             <legend class="visually-hidden">Полное Имя</legend>
-
-            <label class="visually-hidden" for="record-form__second-name"
-              >Фамилия</label
-            >
-            <input
-              class="input"
-              id="record-form__second-name"
-              type="text"
-              name="first-name"
-              placeholder="Фамилия"
-            />
 
             <label class="visually-hidden" for="record-form__first-name"
               >Имя</label
             >
             <input
-              class="input"
+              class="record-form__input  input"
               id="record-form__first-name"
               type="text"
               name="second-name"
               placeholder="Имя"
             />
 
+            <label class="visually-hidden" for="record-form__second-name"
+              >Фамилия</label
+            >
+            <input
+              class="record-form__input  input"
+              id="record-form__second-name"
+              type="text"
+              name="first-name"
+              placeholder="Фамилия"
+            />
+
             <label class="visually-hidden" for="record-form__third-name"
               >Отчество</label
             >
             <input
-              class="input"
+              class="record-form__input  input"
               id="record-form__third-name"
               type="text"
               name="third-name"
               placeholder="Отчество"
             />
-          </fieldset>
+          </div>
+        </fieldset>
 
-          <fieldset class="record-form__contacts">
+        <fieldset class="record-form__contacts">
+          <div class="record-form__fieldset-wrapper">
             <legend class="visually-hidden">Контактные данные</legend>
 
             <label class="visually-hidden" for="record-form__phone"
               >Контактный телефон</label
             >
             <input
-              class="input"
+              class="record-form__input  input"
               id="record-form__phone"
               type="text"
               name="phone"
@@ -152,186 +163,213 @@
               >Контактный e-mail</label
             >
             <input
-              class="input"
+              class="record-form__input  input"
               id="record-form__email"
               type="text"
               name="email"
               placeholder="Контактный e-mail"
             />
-          </fieldset>
+          </div>
+        </fieldset>
 
-          <p class="record-form__additional-info">
-            <label class="visually-hidden" for="record-form__info"
-              >Доп. информация для мастера</label
-            >
-            <textarea
-              class="input"
-              name="additionalInfo"
-              id="record-form__info"
-              placeholder="Доп. информация для мастера"
-            ></textarea>
-          </p>
+        <p class="record-form__additional-info">
+          <label class="visually-hidden" for="record-form__info"
+            >Доп. информация для мастера</label
+          >
+          <textarea
+            class="input"
+            name="additionalInfo"
+            id="record-form__info"
+            placeholder="Доп. информация для мастера"
+          ></textarea>
+        </p>
 
-          <fieldset class="record-form__beard-models">
-            <legend class="record-form__legend">Выберите модель бороды:</legend>
+        <fieldset class="record-form__beard-models">
+          <legend class="record-form__legend">Выберите модель бороды:</legend>
 
-            <input
-              class="input-radio"
-              id="record-form__beard-model-admiral"
-              type="radio"
-              name="beard-model"
-              value="admiral"
-              checked
-            />
-            <label class="record-form__radio-label" for="beard-model-admiral">
-              адмирал
-              <img
-                class="record-form__pic"
-                src=""
-                alt="Модель бороды - адмирал"
+          <div class="record-form__beard-models-wrapper">
+            <div class="record-form__beard-model">
+              <input
+                class="visually-hidden"
+                id="beard-model-admiral"
+                type="radio"
+                name="beard-model"
+                value="admiral"
+                checked
               />
+              <span class="input-radio"></span>
+              <label class="record-form__radio-label" for="beard-model-admiral">
+                адмирал
+                <img
+                  class="record-form__pic"
+                  src="img/beard-1.svg"
+                  alt="Модель бороды - адмирал"
+                />
+              </label>
+            </div>
+
+            <div class="record-form__beard-model">
+              <input
+                class="visually-hidden"
+                id="beard-model-lesorub"
+                type="radio"
+                name="beard-model"
+                value="lesorub"
+              />
+              <span class="input-radio"></span>
+              <label class="record-form__radio-label" for="beard-model-lesorub">
+                лесоруб
+                <img
+                  class="record-form__pic"
+                  src="img/beard-2.svg"
+                  alt="Модель бороды - лесоруб"
+                />
+              </label>
+            </div>
+
+            <div class="record-form__beard-model">
+              <input
+                class="visually-hidden"
+                id="beard-model-polar"
+                type="radio"
+                name="beard-model"
+                value="polar"
+              />
+              <span class="input-radio"></span>
+              <label class="record-form__radio-label" for="beard-model-polar">
+                полярник
+                <img
+                  class="record-form__pic"
+                  src="img/beard-3.svg"
+                  alt="Модель бороды - полярник"
+                />
+              </label>
+            </div>
+
+            <div class="record-form__beard-model">
+              <input
+                class="visually-hidden"
+                id="beard-model-boyarin"
+                type="radio"
+                name="beard-model"
+                value="boyarin"
+              />
+              <span class="input-radio"></span>
+              <label class="record-form__radio-label" for="beard-model-boyarin">
+                боярин
+                <img
+                  class="record-form__pic"
+                  src="img/beard-4.svg"
+                  alt="Модель бороды - боярин"
+                />
+              </label>
+            </div>
+
+            <div class="record-form__beard-model">
+              <input
+                class="visually-hidden"
+                id="beard-model-mudrec"
+                type="radio"
+                name="beard-model"
+                value="mudrec"
+              />
+              <span class="input-radio"></span>
+              <label class="record-form__radio-label" for="beard-model-mudrec">
+                мудрец
+                <img
+                  class="record-form__pic"
+                  src="img/beard-5.svg"
+                  alt="Модель бороды - мудрец"
+                />
+              </label>
+            </div>
+          </div>
+        </fieldset>
+
+        <fieldset class="record-form__additional-services">
+          <legend class="record-form__legend">Дополнительные услуги:</legend>
+
+          <div class="record-form__additional-services-wrapper">
+            <label class="record-form__checkbox-label">
+              <input
+                class="visually-hidden"
+                type="checkbox"
+                name="additional-services"
+                value="paint-beard"
+                checked
+              />
+              <span class="input-checkbox"></span>
+
+              Подкрасить бороду
             </label>
 
-            <input
-              class="input-radio"
-              id="record-form__beard-model-lesorub"
-              type="radio"
-              name="beard-model"
-              value="lesorub"
-            />
-            <label class="record-form__radio-label" for="beard-model-lesorub">
-              лесоруб
-              <img
-                class="record-form__pic"
-                src=""
-                alt="Модель бороды - лесоруб"
+            <label class="record-form__checkbox-label">
+              <input
+                class="visually-hidden"
+                type="checkbox"
+                name="additional-services"
+                value="wind-mustache"
+                checked
               />
+              <span class="input-checkbox"></span>
+
+              Накрутить усы
             </label>
 
-            <input
-              class="input-radio"
-              id="beard-model-polar"
-              type="radio"
-              name="beard-model"
-              value="polar"
-            />
-            <label class="record-form__radio-label" for="beard-model-polar">
-              полярник
-              <img
-                class="record-form__pic"
-                src=""
-                alt="Модель бороды - полярник"
+            <label class="record-form__checkbox-label">
+              <input
+                class="visually-hidden"
+                type="checkbox"
+                name="additional-services"
+                value="comb-beard"
               />
+              <span class="input-checkbox"></span>
+
+              Причесать бороду
             </label>
 
-            <input
-              class="input-radio"
-              id="beard-model-boyarin"
-              type="radio"
-              name="beard-model"
-              value="boyarin"
-            />
-            <label class="record-form__radio-label" for="beard-model-boyarin">
-              боярин
-              <img
-                class="record-form__pic"
-                src=""
-                alt="Модель бороды - боярин"
+            <label class="record-form__checkbox-label">
+              <input
+                class="visually-hidden"
+                type="checkbox"
+                name="additional-services"
+                value="trim-hair"
               />
+              <span class="input-checkbox"></span>
+
+              Подровнять виски
             </label>
 
-            <input
-              class="input-radio"
-              id="beard-model-mudrec"
-              type="radio"
-              name="beard-model"
-              value="mudrec"
-            />
-            <label class="record-form__radio-label" for="beard-model-mudrec">
-              мудрец
-              <img
-                class="record-form__pic"
-                src=""
-                alt="Модель бороды - мудрец"
+            <label class="record-form__checkbox-label">
+              <input
+                class="visually-hidden"
+                type="checkbox"
+                name="additional-services"
+                value="rm-gray-hair"
               />
+              <span class="input-checkbox"></span>
+
+              Убрать седину
             </label>
-          </fieldset>
 
-          <fieldset class="record-form__additional-services">
-            <legend class="record-form__legend">Дополнительные услуги:</legend>
+            <label class="record-form__checkbox-label">
+              <input
+                class="visually-hidden"
+                type="checkbox"
+                name="additional-services"
+                value="clean"
+              />
+              <span class="input-checkbox"></span>
 
-            <input
-              class="input-checkbox"
-              id="paint-beard"
-              type="checkbox"
-              name="additional-services"
-              value="paint-beard"
-              checked
-            />
-            <label class="record-form__checkbox-label" for="paint-beard"
-              >Подкрасить бороду</label
-            >
+              Отполировать лысину
+            </label>
+          </div>
+        </fieldset>
 
-            <input
-              class="input-checkbox"
-              id="wind-mustache"
-              type="checkbox"
-              name="additional-services"
-              value="wind-mustache"
-              checked
-            />
-            <label class="record-form__checkbox-label" for="wind-mustache"
-              >Накрутить усы</label
-            >
-
-            <input
-              class="input-checkbox"
-              id="comb-beard"
-              type="checkbox"
-              name="additional-services"
-              value="comb-beard"
-            />
-            <label class="record-form__checkbox-label" for="comb-beard"
-              >Причесать бороду</label
-            >
-
-            <input
-              class="input-checkbox"
-              id="trim-hair"
-              type="checkbox"
-              name="additional-services"
-              value="trim-hair"
-            />
-            <label class="record-form__checkbox-label" for="trim-hair"
-              >Подровнять виски</label
-            >
-
-            <input
-              class="input-checkbox"
-              id="rm-gray-hair"
-              type="checkbox"
-              name="additional-services"
-              value="rm-gray-hair"
-            />
-            <label class="record-form__checkbox-label" for="rm-gray-hair"
-              >Убрать седину</label
-            >
-
-            <input
-              class="input-checkbox"
-              id="clean"
-              type="checkbox"
-              name="additional-services"
-              value="clean"
-            />
-            <label class="record-form__checkbox-label" for="clean"
-              >Отполировать лысину</label
-            >
-          </fieldset>
-
-          <button class="button" type="submit">Отправить заявку</button>
-        </form>
-      </div>
+        <button class="button button--huge" type="submit">
+          Отправить заявку
+        </button>
+      </form>
     </main>
 
     <footer class="page-footer">
@@ -398,5 +436,7 @@
 
       <button class="button" type="button">Закрыть окно</button>
     </section>
+
+    <script src="js/burger.js"></script>
   </body>
 </html>

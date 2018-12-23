@@ -1,0 +1,19 @@
+input[type="checkbox"] + .input-checkbox {
+  box-sizing: border-box;
+  display: inline-block;
+  width: 36px;
+  height: 36px;
+
+  border: 1px solid #e5ddd5;
+}
+
+input[type="checkbox"]:focus + .input-checkbox {
+  border: 1px solid #f1ae6a;
+}
+
+input[type="checkbox"]:checked + .input-checkbox {
+  background-position: center center;
+  background-repeat: no-repeat;
+
+  background-image: url("../../img/checkbox.svg");
+}

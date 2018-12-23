@@ -1,16 +1,58 @@
 .record-form {
+  position: relative;
   box-sizing: border-box;
+  width: @mobile-width;
+  margin: 0 auto;
+  padding: 0 20px;
+  padding-bottom: 40px;
+
+  &::before,
+  &::after {
+    position: absolute;
+    top: 100%;
+    height: 35px;
+    width: 50%;
+    content: "";
+  }
+
+  &::before {
+    left: 0;
+    background-image: linear-gradient(
+      to right top,
+      transparent,
+      transparent 49%,
+      @bg-lightness 50%,
+      @bg-lightness 100%
+    );
+  }
+
+  &::after {
+    right: 0;
+    background-image: linear-gradient(
+      to right bottom,
+      @bg-lightness,
+      @bg-lightness 50%,
+      transparent 51%,
+      transparent 100%
+    );
+  }
 }
 
 .record-form__name {
   margin: 0;
+  margin-bottom: 32px;
   padding: 0;
 
   border: none;
 }
 
+.record-form__input {
+  margin-bottom: 6px;
+}
+
 .record-form__contacts {
   margin: 0;
+  margin-bottom: 32px;
   padding: 0;
 
   border: none;
@@ -18,17 +60,42 @@
 
 .record-form__additional-info {
   margin: 0;
+  margin-bottom: 40px;
+}
+
+.record-form__additional-info .input {
+  min-height: 112px;
 }
 
 .record-form__beard-models {
   margin: 0;
+  margin-bottom: 20px;
   padding: 0;
 
   border: none;
 }
 
+.record-form__beard-models-wrapper {
+  padding: 0 15px;
+  display: flex;
+  flex-wrap: wrap;
+}
+
+.record-form__beard-model {
+  margin-right: 35px;
+  margin-bottom: 25px;
+
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+
+  &:nth-child(3n) {
+    margin-right: 0;
+  }
+}
+
 .record-form__legend {
-  padding: 0;
+  margin-bottom: 40px;
 
   font-size: 20px;
   text-transform: uppercase;
@@ -37,39 +104,190 @@
 
 .record-form__additional-services {
   margin: 0;
+  margin-bottom: 27px;
   padding: 0;
 
   border: none;
 }
 
+.record-form__additional-services-wrapper {
+  display: flex;
+  flex-direction: column;
+}
+
 .record-form__radio-label {
+  margin-top: 15px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+
   line-height: 24px;
 }
 
+.record-form__pic {
+  margin-top: 10px;
+  display: block;
+}
+
 .record-form__checkbox-label {
+  display: flex;
+  align-items: center;
+  margin-bottom: 20px;
+
   line-height: 30px;
 }
 
+.record-form__checkbox-label .input-checkbox {
+  margin-right: 25px;
+}
+
 @media (min-width: @tablet-width) {
-  .record-form__name {
+  .record-form {
+    width: 640px;
+    padding: 0;
+    padding-bottom: 76px;
+
+    &::before,
+    &::after {
+      display: none;
+    }
+  }
+
+  .record-form__name .record-form__fieldset-wrapper {
     display: flex;
+    flex-wrap: wrap;
+  }
+
+  .record-form__name {
+    margin-bottom: 35px;
+  }
+
+  .record-form__name .record-form__input {
+    box-sizing: border-box;
+    width: 33.33%;
+    margin: 0;
+
+    border-right: none;
+
+    &:last-child {
+      border-right: 1px solid #e5ddd5;
+    }
   }
 
   .record-form__contacts {
-    display: flex;
-    flex-direction: column;
+    margin-bottom: 35px;
+  }
+
+  .record-form__contacts .input {
+    margin-bottom: 35px;
+
+    &:last-child {
+      margin-bottom: 0;
+    }
+  }
+
+  .record-form__additional-info {
+    margin-bottom: 55px;
+  }
+
+  .record-form__additional-info .input {
+    min-height: 211px;
+  }
+
+  .record-form__beard-models {
+    margin-bottom: 55px;
+
+    border: 1px solid #e5ddd5;
+    border-right: none;
+    border-left: none;
+    border-bottom: none;
+  }
+
+  .record-form__beard-models-wrapper {
+    justify-content: space-between;
+  }
+
+  .record-form__beard-model {
+    margin: 0;
   }
 
   .record-form__legend {
+    padding: 0 25px;
+    margin-bottom: 50px;
+
     font-size: 30px;
     line-height: 30px;
   }
 
   .record-form__radio-label {
+    margin-top: 25px;
+
     font-size: 24px;
   }
 
+  .record-form__pic {
+    margin-top: 30px;
+  }
+
+  .record-form__additional-services {
+    margin-bottom: 12px;
+
+    border: 1px solid #e5ddd5;
+    border-right: none;
+    border-left: none;
+    border-bottom: none;
+  }
+
+  .record-form__additional-services-wrapper {
+    flex-direction: row;
+    flex-wrap: wrap;
+  }
+
   .record-form__checkbox-label {
+    width: 50%;
+    margin-bottom: 47px;
+
     font-size: 24px;
+  }
+}
+
+@media (min-width: @desktop-width) {
+  .record-form {
+    width: 960px;
+    padding: 0;
+    padding-bottom: 87px;
+  }
+
+  .record-form__name {
+    margin-bottom: 35px;
+  }
+
+  .record-form__name .record-form__fieldset-wrapper {
+    justify-content: space-between;
+  }
+
+  .record-form__name .record-form__input {
+    width: 295px;
+
+    border-right: 1px solid #e5ddd5;
+  }
+
+  .record-form__contacts .record-form__input {
+    width: 460px;
+    margin-bottom: 0;
+  }
+
+  .record-form__contacts .record-form__fieldset-wrapper {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+  }
+
+  .record-form__additional-services {
+    margin-bottom: 33px;
+  }
+
+  .record-form__checkbox-label {
+    width: 33.33%;
   }
 }

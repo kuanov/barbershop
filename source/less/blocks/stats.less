@@ -71,7 +71,7 @@
 
 .stats__value sup {
   position: absolute;
-  top: 5px;
+  top: 25px;
 
   margin-left: 5px;
 }
@@ -82,6 +82,10 @@
   font-size: 18px;
   line-height: 18px;
   text-align: right;
+}
+
+.stats__field-word {
+  display: block;
 }
 
 .stats__legend {
@@ -109,7 +113,7 @@
 @media (min-width: @tablet-width) {
   .stats__wrapper {
     width: 640px;
-    margin-top: -185px;
+    margin-top: -178px;
   }
 
   .stats__header {
@@ -189,7 +193,7 @@
   }
 
   .stats__value sup {
-    top: -10px;
+    top: 20px;
   }
 
   .stats__field {
@@ -198,8 +202,8 @@
     text-align: left;
   }
 
-  .stats__field br {
-    display: none;
+  .stats__field-word {
+    display: inline-block;
   }
 }
 
@@ -208,7 +212,7 @@
     display: flex;
 
     width: 960px;
-    margin-top: -164px;
+    margin-top: -160px;
   }
 
   .stats__header {

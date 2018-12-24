@@ -77,7 +77,7 @@
           <ul class="main-navigation__list  user-navigation">
             <li class="user-navigation__item">
               <a
-                class="user-navigation__link user-navigation__login"
+                class="user-navigation__link  user-navigation__login"
                 href="login.html"
               >
                 <svg class="user-navigation__login-icon">
@@ -379,18 +379,20 @@
       </div>
     </footer>
 
-    <section class="modal" style="display:none;">
-      <h2 class="modal__heading">Личный кабинет</h2>
+    <div class="modal-overlay"></div>
 
-      <b class="modal__info">Введите свой логин и пароль, чтобы войти</b>
+    <section class="modal-login">
+      <h2 class="modal-login__heading">Личный кабинет</h2>
+
+      <b class="modal-login__info">Введите свой логин и пароль, чтобы войти</b>
 
       <form
-        class="modal__form"
+        class="modal-login__form"
         action="https://echo.htmlacademy.ru"
         method="POST"
         name="loginForm"
       >
-        <p class="modal__form-field">
+        <p class="modal-login__form-field">
           <label class="visually-hidden" for="login">Ваш логин:</label>
           <input
             class="input"
@@ -401,7 +403,7 @@
           />
         </p>
 
-        <p class="modal__form-field">
+        <p class="modal-login__form-field">
           <label class="visually-hidden" for="password">Ваш пароль:</label>
           <input
             class="input"
@@ -412,25 +414,30 @@
           />
         </p>
 
-        <p class="modal__form-field">
-          <input
-            class="input-checkbox"
-            type="checkbox"
-            id="rememberme"
-            name="rememberme"
-          />
-          <label class="modal__label" for="rememberme">Запомните меня</label>
+        <p class="modal-login__form-help">
+          <label class="modal-login__label">
+            <input class="visually-hidden" type="checkbox" name="rememberme" />
+            <span class="input-checkbox"></span>
 
-          <a class="modal__link" href="#">Я забыл пароль!</a>
+            Запомните меня
+          </label>
+
+          <a class="modal-login__link" href="#">Я забыл пароль!</a>
         </p>
 
-        <p class="modal__form-field">
-          <button class="button" type="submit">Войти</button>
-          <button class="button" type="button">Закрыть</button>
+        <p class="modal-login__form-buttons">
+          <button class="button  button--brown" type="submit">
+            Войти
+            <span class="modal-login__form-submit-text">в личный кабинет</span>
+          </button>
+          <button class="button  modal-login__close" type="button">
+            Закрыть <span class="visually-hidden">Закрыть окно</span>
+          </button>
         </p>
       </form>
     </section>
 
     <script src="js/burger.js"></script>
+    <script src="js/login.js"></script>
   </body>
 </html>

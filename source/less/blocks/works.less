@@ -194,9 +194,13 @@
     flex-shrink: 0;
   }
 
+  .works-item--work-of-month .works-item__review {
+    width: 50%;
+  }
+
   .works-item__review {
     flex-grow: 1;
-
+    width: 50%;
     display: flex;
     flex-direction: column;
     padding: 40px 50px;
@@ -256,6 +260,8 @@
   .works-item__review {
     display: flex;
     flex-direction: column;
+    box-sizing: border-box;
+    width: 100%;
     padding: 30px;
 
     border: 1px solid #e5ddd5;

@@ -7,6 +7,7 @@
     <meta name="format-detection" content="telephone=no" />
     <title>Барбершоп «Бородинский»</title>
 
+    <script src="js/picturefill.min.js" async></script>
     <link
       rel="apple-touch-icon"
       sizes="180x180"
@@ -48,8 +49,8 @@
     />
     <link rel="stylesheet" href="css/style.min.css" />
   </head>
-  <body>
-    <div style="display:none">
+  <body class="page--inner">
+    <div style="display:none;">
       <include src="build/img/sprite.svg"></include>
     </div>
     <header class="page-header page-header--inner">
@@ -132,7 +133,10 @@
           <div class="record-form__fieldset-wrapper">
             <legend class="visually-hidden">Полное Имя</legend>
 
-            <label class="visually-hidden" for="record-form__first-name"
+            <label
+              class="visually-hidden"
+              id="asd"
+              for="record-form__first-name"
               >Имя</label
             >
             <input
@@ -497,7 +501,7 @@
       </form>
     </section>
 
-    <section class="popup" style="display:none">
+    <section class="popup" style="display:none;">
       <h2 class="popup__title">Неудача</h2>
 
       <p class="popup__description">
@@ -507,7 +511,7 @@
       <button class="button" type="button">Ok</button>
     </section>
 
-    <section class="popup" style="display: none">
+    <section class="popup" style="display: none;">
       <h2 class="popup__title">Это успех!</h2>
 
       <p class="popup__description">

@@ -262,25 +262,32 @@
     margin-bottom: 35px;
   }
 
-  .record-form__name .record-form__fieldset-wrapper {
-    justify-content: space-between;
-  }
+  // .record-form__name .record-form__fieldset-wrapper {
+  //   justify-content: space-between;
+  // }
 
   .record-form__name .record-form__input {
     width: 295px;
 
     border-right: 1px solid #e5ddd5;
+
+    &:not(:last-child) {
+      margin-right: 37.5px;
+    }
   }
 
   .record-form__contacts .record-form__input {
     width: 460px;
     margin-bottom: 0;
+
+    &:not(:last-child) {
+      margin-right: 40px;
+    }
   }
 
   .record-form__contacts .record-form__fieldset-wrapper {
     display: flex;
     flex-wrap: wrap;
-    justify-content: space-between;
   }
 
   .record-form__additional-services {
